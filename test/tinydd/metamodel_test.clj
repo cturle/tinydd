@@ -1,5 +1,6 @@
 (ns tinydd.metamodel-test
   (:require [clojure.test :refer :all]
+            [utils.model  :refer :all]
             [tinydd.metamodel :refer :all]))
 
 (deftest race-test

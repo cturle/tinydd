@@ -1,16 +1,10 @@
 (ns tinydd.metamodel
-  (:require [utils.clojure :refer :all]) )
+  (:require [utils.clojure :refer :all]
+            [utils.model   :refer :all] ))
 
-; todo : move to utils.model
-(defn new-model
-  "create and return a new model"
-  []
-  {:next-id 1}
-  )
 
-; todo : + remove-race
+; todo : move to tinydd.metamodel.race ?
 (declare get-all-race, add-race, remove-race, the-race-name)
-
 
 (defn get-all-race
   "return a vector of all race of model M"
