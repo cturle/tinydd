@@ -6,13 +6,16 @@
 (deftest race-test
   (testing "Race API"
     (let [M0      (new-model)
-          N       "race-1"
-          [M1 R1] (add-race M0 N)
-          M2      (remove-race M1 R1) ]
+          N1      "race-1"
+          N2      "race-2"
+          [M1 R1] (add-race M0 N1)
+          M2      (update-race M1 R1 N2)
+          M3      (remove-race M1 R1) ]
       (is (= []   (get-all-race M0)))
       (is (= [R1] (get-all-race M1)))
-      (is (= N    (the-race-name M1 R1)))
-      (is (= []   (get-all-race M2)))
+      (is (= N1   (the-race-name M1 R1)))
+      (is (= N2   (the-race-name M2 R1)))
+      (is (= []   (get-all-race M3)))
       )))
 
 ; (run-tests)
