@@ -1,6 +1,7 @@
 # tinydd
 
-FIXME: description
+A remake in clojure of an old Facebook D&D game : [D&D Tiny adventures](http://dndta.wikia.com/wiki/Dungeons_%26_Dragons_Tiny_Adventures)
+
 
 ## Installation
 
