@@ -1,5 +1,6 @@
 (ns repl.session
-  (:require [repl.core :refer :all] ))
+  (:require [repl.model :refer :all]
+            [repl.race  :refer :all] ))
 
 ;;; repl interaction : scenario 1
 ; - create a new model
